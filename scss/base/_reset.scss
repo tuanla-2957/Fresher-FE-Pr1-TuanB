@@ -1,0 +1,70 @@
+img {
+  max-width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+i,
+span,
+a {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-roboto;
+  margin: 0px;
+}
+
+h1 {
+  font-size: $fs-8xl;
+}
+h2 {
+  font-size: $fs-7xl;
+}
+h3 {
+  font-size: $fs-5xl;
+}
+h4 {
+  font-size: $fs-2xl;
+}
+h5 {
+  font-size: $fs-l;
+}
+h6 {
+  font-size: $fs-base;
+}
+ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+p {
+  font-size: $fs-base;
+  font-weight: 400;
+  line-height: $lh-3xl;
+  margin: 0px;
+  text-align: justify;
+}

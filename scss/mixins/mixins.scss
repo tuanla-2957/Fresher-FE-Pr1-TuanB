@@ -1,0 +1,27 @@
+@mixin flex(
+  $justify: start,
+  $align: start,
+  $direction: row,
+  $wrap: wrap,
+  $gap: 0
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  @if ($direction != "row") {
+    flex-direction: $direction;
+  }
+
+  flex-wrap: $wrap;
+  @if ($gap != 0) {
+    gap: $gap;
+  }
+}
+
+@mixin box($width, $height: $width, $radius: 0) {
+  width: $width;
+  height: $height;
+  @if ($radius != 0) {
+    border-radius: $radius;
+  }
+}
