@@ -1,0 +1,52 @@
+.home {
+  .banner {
+    background-color: $bg-gray;
+
+    &-wrapper {
+      @include flex($justify: space-between, $align: flex-end, $wrap: nowrap);
+    }
+
+    &__left {
+      @include flex($justify: center, $align: center, $direction: column);
+      padding-bottom: 40px;
+      text-align: center;
+      @include respond-to('large') {
+        padding-top: 100px;
+        padding-bottom: 20px;
+      }
+    }
+
+    &__product {
+      @include respond-to('large') {
+            width: 80%;
+          }
+    }
+
+    &__text {
+      font-size: $fs-xl;
+      color: $text-other;
+      margin-top: 5px;
+    }
+
+    &__price {
+      font-size: $fs-9xl;
+      color: $text-green;
+      font-weight: 300;
+      margin-top: 5px;
+    }
+
+    &__buy {
+      text-decoration: underline;
+      font-size: $fs-l;
+      margin-top: 10px;
+    }
+
+    &__right {
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

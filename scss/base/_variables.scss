@@ -13,6 +13,11 @@
   --fs-6xl: calc(1.875rem / var(--ratio));
   --fs-7xl: calc(2.125rem / var(--ratio));
   --fs-8xl: calc(2.5rem / var(--ratio));
+  --fs-9xl: calc(2.25rem / var(--ratio));
+  
+  @media only screen and (max-width: 992px) {
+    --ratio: 1.25;
+  }
 }
 
 //Font Size
@@ -28,9 +33,11 @@ $fs-5xl: var(--fs-5xl);
 $fs-6xl: var(--fs-6xl);
 $fs-7xl: var(--fs-7xl);
 $fs-8xl: var(--fs-8xl);
+$fs-9xl: var(--fs-9xl);
 
 // Font Family
-$ff-roboto: "Roboto", sans-serif;
+$ff-roboto: 'Roboto', sans-serif;
+$ff-opensans: 'Open Sans', sans-serif;
 
 // Colors
 $white: #fff;
@@ -63,7 +70,7 @@ $text-other: #6c3c33;
 //background-color
 $bg-dark: #000;
 $bg-white: #fff;
-$bg-gray: #777777;
+$bg-gray: #f1f1f1;
 
 // Line Height
 
@@ -78,10 +85,18 @@ $lh-4xl: 1.625rem;
 $lh-5xl: 1.75rem;
 $lh-6xl: 1.875rem;
 
+//z-index
+$z-negative: -1;
+$z-elevate: 1;
+$z-sticky: 100;
+$z-drawer: 200;
+
 // Responsive Variables
-$desktop: "only screen and (min-width: 1400px)";
-$laptop: "only screen and (min-width: 1200px) and (max-width: 1499px)";
-$lg: "only screen and (min-width: 992px) and (max-width: 1200px)";
-$md: "only screen and (min-width: 768px) and (max-width: 991px)";
-$xs: "(max-width: 767px)";
-$sm: "only screen and (min-width: 576px) and (max-width: 767px)";
+$breakpoints: (
+  'small':  ( min-width:  768px ),
+  'medium': ( max-width:  992px ),
+  'large':  ( max-width: 1200px ),
+  'mobile': ( max-width: 576px ),
+  'tablet': ( max-width: 768px ),
+) !default;
+

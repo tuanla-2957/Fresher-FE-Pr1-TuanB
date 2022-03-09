@@ -1,13 +1,17 @@
+
 * {
   box-sizing: inherit;
 }
 
 html {
-  font-size: $fs-base;
+  font-size: 1rem;
   box-sizing: border-box;
   font-weight: 400;
   color: $text-black;
-  font-family: $ff-roboto;
+}
+
+body {
+  font-family: $ff-opensans;
 }
 
 .text-bold {
