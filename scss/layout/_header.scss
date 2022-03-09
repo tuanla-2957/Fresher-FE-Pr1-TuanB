@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  height: 80px;
+  z-index: $z-sticky;
+  font-weight: 600;
+
+  &-wrapper {
+    @include flex($justify: space-between, $align: center);
+    height: 80px;
+  }
+
+  .logo {
+    img {
+      height: 50px;
+    }
+  }
+}
