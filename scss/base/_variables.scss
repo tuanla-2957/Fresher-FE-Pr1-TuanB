@@ -2,7 +2,7 @@
 :root {
   --ratio: 1;
   --fs-xs: calc(0.75rem / var(--ratio));
-  --fs-s: calc(0.875 / var(--ratio));
+  --fs-s: calc(0.875rem / var(--ratio));
   --fs-base: calc(1rem / var(--ratio));
   --fs-l: calc(1.125rem / var(--ratio));
   --fs-xl: calc(1.25rem / var(--ratio));
@@ -46,7 +46,7 @@ $gray: #808080;
 $green: #779529;
 
 // Border Color
-$border-color: #e6e6e6;
+$border-color: #494949;
 $boder-black: #c0c0c0;
 $border-line: #e6e6e6;
 $boder-button: #191919;
@@ -93,10 +93,10 @@ $z-drawer: 200;
 
 // Responsive Variables
 $breakpoints: (
-  'small':  ( min-width:  768px ),
-  'medium': ( max-width:  992px ),
-  'large':  ( max-width: 1200px ),
-  'mobile': ( max-width: 576px ),
-  'tablet': ( max-width: 768px ),
+  'small':  (min-width:768px),
+  'medium': (max-width:992px),
+  'large':  (max-width:1200px),
+  'mobile': (max-width:576px),
+  'tablet': (max-width:768px),
 ) !default;
 
