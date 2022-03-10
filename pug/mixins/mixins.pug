@@ -48,3 +48,28 @@ mixin contact-link(items)
 mixin product-list()
     div.product__list.row
         block
+
+mixin categorys(categories, jewels)
+    each category, index in categories
+        div.sidebar__list
+            ul(class=category.active === true ? "text-green" : "")=category.title
+                if category.active
+                    each jewel, index in jewels
+                        li.sidebar__item.py-2
+                            a(href=jewel.link)
+                                i.fas.fa-circle.px-2
+                                span=jewel.name
+
+mixin breadcrumb(items, last)
+    .breadcrumb
+        ul.breadcrumb__list&attributes(attributes)
+            each item in items
+                li.breadcrumb__item
+                    if (items.length === 1)
+                        span.breadcrumb__link= item
+                    else
+                        a(href="#" title=item).breadcrumb__link= item
+            if last
+                li.breadcrumb__item
+                    span.breadcrumb__link-current= last
+            else
