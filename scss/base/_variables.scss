@@ -14,10 +14,6 @@
   --fs-7xl: calc(2.125rem / var(--ratio));
   --fs-8xl: calc(2.5rem / var(--ratio));
   --fs-9xl: calc(2.25rem / var(--ratio));
-  
-  @media only screen and (max-width: 992px) {
-    --ratio: 1.25;
-  }
 }
 
 //Font Size
@@ -38,6 +34,8 @@ $fs-9xl: var(--fs-9xl);
 // Font Family
 $ff-roboto: 'Roboto', sans-serif;
 $ff-opensans: 'Open Sans', sans-serif;
+$ff-utm: 'U TM', sans-serif;
+$ff-Lobster: 'Lobster', cursive;
 
 // Colors
 $white: #fff;
@@ -61,6 +59,7 @@ $text-gray100: #737373;
 $text-black: #000000;
 $text-black90: #050505;
 $text-black80: #1a1a1a;
+$text-black60: #131313;
 $text-black70: #212121;
 $text-black10: #4b4b4b;
 $text-white: #ffffff;

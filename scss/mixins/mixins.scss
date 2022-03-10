@@ -26,6 +26,12 @@
   }
 }
 
+@mixin bg($url, $repeat: no-repeat, $position: center, $size: contain) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
 //response
 @mixin respond-to($breakpoint) {
   // If the key exists in the map
