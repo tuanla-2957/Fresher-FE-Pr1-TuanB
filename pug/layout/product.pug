@@ -1,0 +1,16 @@
+include ../componets/sidebar/product-sidebar.pug
+include ../data/product.pug
+
+div.product 
+    div.path
+        div.container 
+            div.path-wrapper
+                +breadcrumb(['Home', 'Sản phẩm'], 'Trang sức')
+    div.banner 
+        div.banner-wrapper 
+            img(src="../../assets/images/product-banner.png", alt="")
+    div.product__content
+        div.container 
+            div.row 
+                div.col-12.col-lg-3
+                    +product-sidebar(categories, fewels, tagList)
