@@ -52,4 +52,16 @@
 
 .button + .button {
   margin-left: 4px;
-} 
+}
+
+.button-paging {
+  border: none;
+  outline: none;
+  font-size: $fs-s;
+  line-height: $lh-6xl;
+  background-color: transparent;
+}
+
+.button-paging:hover {
+  color: $text-green;
+}

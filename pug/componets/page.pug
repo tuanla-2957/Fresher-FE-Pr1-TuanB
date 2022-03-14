@@ -1,0 +1,15 @@
+
+mixin paginate(totalPage)
+    div.page 
+        div.page__arrange
+            button.button-paging  
+                i.fa-solid.fa-list
+            button.button-paging 
+                i.fas.fa-th-large
+        div.page__paging
+            button.button-paging 
+                i.fas.fa-caret-left
+            -for(let page = 0; page  < totalPage; page ++)
+                button.button-paging= page+1
+            button.button-paging 
+                i.fas.fa-caret-right
