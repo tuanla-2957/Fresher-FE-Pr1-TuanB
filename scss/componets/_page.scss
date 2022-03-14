@@ -1,0 +1,5 @@
+.page {
+  @include flex($justify: space-between, $align: center);
+  padding: 10px 0;
+  border-bottom: 1px solid $border-line;
+}

@@ -1,5 +1,7 @@
 include ../componets/sidebar/product-sidebar.pug
 include ../data/product.pug
+include ../componets/card/product-card-grid.pug
+include ../componets/page.pug
 
 div.product 
     div.path
@@ -14,3 +16,12 @@ div.product
             div.row 
                 div.col-12.col-lg-3
                     +product-sidebar(categories, fewels, tagList)
+                div.product__items.col-12.col-lg-9
+                    div.product__page 
+                        +paginate(3)
+                    +product-list()
+                        each product, index in productList 
+                            div.product__item.col-6.col-lg-4
+                                +card-grid(product)
+                    div.product__page 
+                        +paginate(3)
