@@ -1,11 +1,13 @@
 
 mixin paginate(totalPage)
     div.page 
-        div.page__arrange
-            button.button-paging  
-                i.fa-solid.fa-list
-            button.button-paging 
-                i.fas.fa-th-large
+        ul.nav.nav-tabs.page__arrange
+            li.nav-item.button-paging
+                a.nav-link(aria-current="page" href="product.html") 
+                    i.fas.fa-th-large
+            li.nav-item.button-paging
+                a.nav-link(href="product-list.html")  
+                    i.fa-solid.fa-list
         div.page__paging
             button.button-paging 
                 i.fas.fa-caret-left
