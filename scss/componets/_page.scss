@@ -1,0 +1,10 @@
+.page {
+  @include flex($justify: space-between, $align: center);
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e6e6;
+
+  a {
+    font-size: $fs-s;
+    line-height: 30px;
+  }
+}
