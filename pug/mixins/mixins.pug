@@ -73,3 +73,8 @@ mixin breadcrumb(items, last)
                 li.breadcrumb__item
                     span.breadcrumb__link-current= last
             else
+
+mixin input-group(label , type = "text", id) 
+    div.form-group 
+        label.text-require(for=id)=label
+        input.input(type=type, id=id)
