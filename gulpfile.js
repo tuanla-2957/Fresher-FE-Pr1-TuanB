@@ -11,7 +11,7 @@ const {
 const FilesPath = {
     sassFiles: 'scss/**/*.scss',
     jsFiles: 'js/*.js',
-    htmlFiles: 'pug/pages/**/*.pug'
+    htmlFiles: 'pug/**/**/*.pug'
 }
 const {
     sassFiles,
