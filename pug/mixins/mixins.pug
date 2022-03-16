@@ -75,9 +75,11 @@ mixin breadcrumb(items, last)
             else
 
 mixin input-group(label , type = "text", id) 
-    div.form-group 
-        label.text-require(for=id)=label
-        input.input(type=type, id=id)
+    div.form-group
+        div.label 
+            label.text-require(for=id)=label
+        div.control
+            input.input(type=type, id=id)
 
 mixin blog-list()
     div.blog__list.row
