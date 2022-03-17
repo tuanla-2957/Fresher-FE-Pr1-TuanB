@@ -1,5 +1,6 @@
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 a {
@@ -104,36 +105,60 @@ p {
 .breadcrumb {
   margin-bottom: 0;
   font-size: $fs-s;
-  
+
   &__item {
     display: inline-block;
     vertical-align: top;
-    
+
     // breadcrumb icon
     &:not(:last-child):after {
-      content: '>';
+      content: ">";
       margin-right: 4px;
       margin-left: 4px;
     }
-    
+
     &:not(:last-child):hover {
       color: $text-green;
-    } 
+    }
   }
-  
-  &__link {
 
+  &__link {
+    
     &:hover {
       color: $text-green;
     }
   }
-  
+
   &__link-current {
     color: $text-green;
   }
-  
+
   &__list {
     list-style-type: none;
     padding: 0;
   }
+}
+
+.arrow-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 100%;
+}
+
+.arrow-container::before,
+.arrow-container::after {
+  content: "";
+  background-color: $bg-white;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 20px solid $bg-white;
+  border-right: 20px solid $bg-white;
+  border-top: 20px solid transparent;
 }

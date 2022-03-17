@@ -79,3 +79,6 @@ mixin input-group(label , type = "text", id)
         label.text-require(for=id)=label
         input.input(type=type, id=id)
 
+mixin blog-list()
+    div.blog__list.row
+        block
