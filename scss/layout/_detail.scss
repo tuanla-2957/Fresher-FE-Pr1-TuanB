@@ -83,4 +83,34 @@
     background-color: transparent;
     padding: 0;
   }
+  
+  &__info {
+    .info {
+      &__list {
+        width: 100%;
+        border-bottom: 1px solid $border-line;
+        padding: 15px 0;
+      }
+
+      &__link {
+        display: inline-block;
+        
+        a {
+          font-size: $fs-l;
+          font-weight: 700;
+          color: $text-gray100;
+        }
+      }
+
+      &__link--active {
+        a {
+          color: $text-black60;
+        }
+      }
+    }
+  }
+
+  &__highlight {
+    @include flex($justify: space-around, $direction: column);
+  }
 }
