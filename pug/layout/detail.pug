@@ -1,6 +1,7 @@
 include ../mixins/mixins.pug
 include ../data/product-detail.pug
 include ../componets/card/product-detail-card.pug
+include ../componets/sidebar/detail-sidebar.pug
 div.product-detail 
     div.container 
         div.product-detail-wrapper 
@@ -39,7 +40,7 @@ div.product-detail
                                 button.button.button-product
                                     i.fas.fa-sync
             div.row 
-                div.col-lg-9
+                div.col-xl-9
                     div.product-detail__info
                         ul.info__list 
                             li.info__link.info__link--active
@@ -56,3 +57,6 @@ div.product-detail
                                 div.product-detail__highlight
                                     each item, index in highlights
                                         +product-detail-card(item)
+                div.col-3.d-none.d-xl-block 
+                    +product-detail-sidebar("Sản phẩm mua nhiều", productSolds)
+                    +product-detail-sidebar("Sản phẩm bán chạy", productBoughts)
