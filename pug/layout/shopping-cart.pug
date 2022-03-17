@@ -1,0 +1,32 @@
+mixin cart(carts)
+    div.shopping-cart 
+        div.container 
+            div.shopping-cart-wrapper 
+                div.path 
+                    +breadcrumb(['Home'], 'Tài khoản')
+                div.cart
+                    div.cart__title GIỎ HÀNG
+                    table.table.table-bordered
+                        thead 
+                            tr
+                                th Ảnh
+                                th Tên Sản Phẩm 
+                                th Giá
+                                th Số Lượng
+                                th Tổng Số
+                                th Xóa
+                        tbody
+                            each item, index in carts
+                                tr
+                                    td
+                                        img(src=item.img, alt="")
+                                    td=item.name 
+                                    td=item.price 
+                                    td=item.quantity
+                                    td=item.total
+                                    td
+                                        i.fas.fa-trash-alt
+                div.shopping-cart__action
+                    button.button.button-dark Tiếp Tục Mua Hàng
+                    button.button.button-dark  Xóa
+                    button.button.button-dark.button-update Cập Nhật
