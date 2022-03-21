@@ -1,10 +1,6 @@
 .card {
   border: none;
 
-  &:hover &__button {
-    display: flex;
-  }
-
   &-body {
     text-align: center;
   }
@@ -35,7 +31,6 @@
 
   &__button {
     @include flex($justify: center, $align: center);
-    display: none;
   }
 
   img {

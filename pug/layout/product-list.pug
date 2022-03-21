@@ -4,4 +4,5 @@ block product-list
     +product-list()
         each product, index in productGrid
             div.product__item.col-12
-                +card-list(product)
+                a(href="detail.html")
+                    +card-list(product)
