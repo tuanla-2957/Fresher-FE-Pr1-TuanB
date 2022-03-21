@@ -2,8 +2,10 @@ include ../data/home.pug
 include ../mixins/mixins.pug
 include ../data/product.pug
 include ../componets/card/product-card-grid.pug
+include ../layout/newsletter-popup.pug
 
 div.home
+    +modal()
     div.banner
         div.container 
             div.banner-wrapper
@@ -45,7 +47,7 @@ div.home
                     img(src="../../assets/images/background2-home.png", alt="")
     div.product 
         div.container-fluid
-            div.product-wrapper 
+            div.product-wrapper
                 +list-title(productTitle)
                 +list-category(category)
                 +product-list()
