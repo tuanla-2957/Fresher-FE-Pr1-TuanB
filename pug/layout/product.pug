@@ -24,10 +24,6 @@ div.product
                         div.product__page 
                             +paginate(3)
                         block product-list
-                            +product-list()
-                                each product, index in productList 
-                                    div.product__item.col-6.col-lg-4
-                                        a(href="detail.html")
-                                            +card-grid(product) 
+                            div#product-grid.product__list.row
                         div.product__page 
                             +paginate(3)
