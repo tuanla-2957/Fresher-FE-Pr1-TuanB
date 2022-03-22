@@ -6,7 +6,7 @@ mixin cart(carts)
                     +breadcrumb(['Home'], 'Tài khoản')
                 div.cart
                     div.cart__title GIỎ HÀNG
-                    table.table.table-bordered
+                    table.table.table-bordered.table-card
                         thead 
                             tr
                                 th Ảnh
@@ -15,18 +15,8 @@ mixin cart(carts)
                                 th Số Lượng
                                 th Tổng Số
                                 th Xóa
-                        tbody
-                            each item, index in carts
-                                tr
-                                    td
-                                        img(src=item.img, alt="")
-                                    td=item.name 
-                                    td=item.price 
-                                    td=item.quantity
-                                    td=item.total
-                                    td
-                                        i.fas.fa-trash-alt
+                        tbody.table-card__tbody
                 div.shopping-cart__action
                     button.button.button-dark Tiếp Tục Mua Hàng
-                    button.button.button-dark  Xóa
+                    button.button.button-dark.delete-product  Xóa
                     button.button.button-dark.button-update Cập Nhật
