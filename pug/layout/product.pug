@@ -27,6 +27,7 @@ div.product
                             +product-list()
                                 each product, index in productList 
                                     div.product__item.col-6.col-lg-4
-                                        +card-grid(product)
+                                        a(href="detail.html")
+                                            +card-grid(product) 
                         div.product__page 
                             +paginate(3)

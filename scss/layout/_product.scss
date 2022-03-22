@@ -16,6 +16,20 @@
     @include flex($justify: space-between, $align: center, $direction: column);
   }
 
+  &__item {
+    margin-top: 10px;
+
+    a {
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    a:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+    }
+  }
+
   &__page {
     width: 100%;
   }
