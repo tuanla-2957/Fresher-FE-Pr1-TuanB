@@ -2,6 +2,7 @@ import { $ } from '../base/base.js';
 import { PRODUCT_STORAGE_KEY } from '../base/constant.js'
 import toast from '../component/toast.js';
 import productGrids from '../component/product-grid.js'
+import { setItemLocal } from '../component/localstorage.js'
 
 const productList = $("#product-grid");
 
@@ -20,7 +21,7 @@ const product = {
         axios.get(url, { params })
             .then(res => {
                 products = res.data
-                const htmls = products.map((product, index) => {
+                const htmls = products.map((product) => {
                             return productGrids(product)
                 });
                 productList.innerHTML = htmls.join("");
@@ -33,7 +34,7 @@ const product = {
         productList.addEventListener("click", e => {
             if (e.target.closest(".button__buy")) {
                 productCart.push(JSON.parse(e.target.closest(".button__buy").dataset.value))
-                localStorage.setItem(PRODUCT_STORAGE_KEY, JSON.stringify(productCart))
+                setItemLocal(PRODUCT_STORAGE_KEY, productCart)
                 toast({
                     title: "Thành công!",
                     message: "Bạn đã thêm sản phẩm vào giỏ hàng.",

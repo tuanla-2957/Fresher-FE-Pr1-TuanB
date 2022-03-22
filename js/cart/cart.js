@@ -1,12 +1,13 @@
 import { $ } from '../base/base.js';
 import { PRODUCT_STORAGE_KEY } from '../base/constant.js'
 import dialog from '../component/confirm.js'
+import { getItemLocal , setItemLocal } from '../component/localstorage.js'
 
 const tableCart = $(".table-card__tbody")
 const btnDelete = $(".delete-product")
 
 const shoppingCart = {
-    products: JSON.parse(localStorage.getItem(PRODUCT_STORAGE_KEY)) || [],
+    products: getItemLocal(PRODUCT_STORAGE_KEY),
 
     loadProduct: function() {
         const htmls = this.products.map((product) => {
@@ -39,7 +40,7 @@ const shoppingCart = {
                 dialog('Delete product','Do you want delete product?',
                     function() {
                         _this.products = _this.products.filter((product) => product.id !== idDelete)
-                        localStorage.setItem(PRODUCT_STORAGE_KEY, JSON.stringify(_this.products))
+                        setItemLocal(PRODUCT_STORAGE_KEY, _this.products)
                         _this.loadProduct()
                     }
                 );
@@ -50,8 +51,7 @@ const shoppingCart = {
         btnDelete.addEventListener("click", event => {
             dialog('Delete product','Do you want delete product?',
                 function() {
-                    _this.products = []
-                    localStorage.setItem(PRODUCT_STORAGE_KEY, JSON.stringify(_this.products))
+                    setItemLocal(PRODUCT_STORAGE_KEY, [])
                     _this.loadProduct()
                 }
             );

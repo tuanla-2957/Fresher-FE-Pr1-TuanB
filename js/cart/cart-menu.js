@@ -1,11 +1,12 @@
 import { $ } from '../base/base.js';
 import { PRODUCT_STORAGE_KEY } from '../base/constant.js'
 import miniCart from '../component/cart-mini.js'
+import { getItemLocal } from '../component/localstorage.js'
 
 const megamenuCart = $(".mega-menu--cart")
 
 const cartMenu = {
-    products: JSON.parse(localStorage.getItem(PRODUCT_STORAGE_KEY)) || [],
+    products: getItemLocal(PRODUCT_STORAGE_KEY),
 
     loadCart: function() {
         let totalPrice = 0;
