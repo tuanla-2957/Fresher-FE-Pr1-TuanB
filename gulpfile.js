@@ -10,7 +10,7 @@ const {
 
 const FilesPath = {
     sassFiles: 'scss/**/*.scss',
-    jsFiles: 'js/*.js',
+    jsFiles: 'js/**/*.js',
     htmlFiles: 'pug/pages/**/*.pug'
 }
 const {
@@ -39,7 +39,7 @@ function htmlTask() {
 // extension
 
 function jsTask() {
-    return src(jsFiles).pipe(concat('all.js')).pipe(dest('dist/js'))
+    return src(jsFiles).pipe(dest('dist/js'))
 }
 
 // copy

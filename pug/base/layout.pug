@@ -19,13 +19,18 @@ html(lang="en")
         link(rel="stylesheet", href="/css/style.css")
         title Mandala
     body
+        div#toast
         block header
             include ../layout/header
         block content
         block footer 
             include ../layout/footer
+
         //- <!-- bootstrap bundle -->
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous")
+        //-
+        block js
+
 

@@ -18,16 +18,30 @@
 
   &__item {
     margin-top: 10px;
+    position: relative;
 
     a {
-      width: 100%;
-      padding: 10px 0;
+      position: absolute;
+      top: 0;
+      left: 10px;
+      height: 100%;
+      right: 10px;
     }
 
     a:hover {
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
       border-radius: 10px;
     }
+  }
+
+  &__card {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  &__card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
   }
 
   &__page {
