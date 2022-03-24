@@ -1,4 +1,5 @@
-import { $, $$, PRODUCT_STORAGE_KEY } from '../base/constant.js';
+import { $ } from '../base/base.js';
+import { PRODUCT_STORAGE_KEY } from '../base/constant.js'
 import toast from '../component/toast.js';
 import productGrids from '../component/product-grid.js'
 
@@ -29,7 +30,7 @@ const product = {
 
     handleEvents: function () {
         let productCart = [];
-        productList.onclick = function(e) {
+        productList.addEventListener("click", e => {
             if (e.target.closest(".button__buy")) {
                 productCart.push(JSON.parse(e.target.closest(".button__buy").dataset.value))
                 localStorage.setItem(PRODUCT_STORAGE_KEY, JSON.stringify(productCart))
@@ -47,7 +48,7 @@ const product = {
                     duration: 5000
                 });
             }
-        }
+        })
     },
 
     start: function () {

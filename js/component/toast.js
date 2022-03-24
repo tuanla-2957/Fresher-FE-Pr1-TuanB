@@ -9,12 +9,12 @@ export default function toast({ title = "", message = "", type = "info", duratio
     }, duration + 1000);
 
     // Remove toast when clicked
-    toast.onclick = function (e) {
+    toast.addEventListener("click", e => {
       if (e.target.closest(".toast__close")) {
         main.removeChild(toast);
         clearTimeout(autoRemoveId);
       }
-    };
+    });
 
     const icons = {
       success: "fas fa-check-circle",
