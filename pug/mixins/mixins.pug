@@ -70,7 +70,7 @@ mixin input-group(label , type = "text", id)
         div.label 
             label.text-require(for=id)=label
         div.control
-            input.input(type=type, id=id)
+            input.input(type=type, id=id, name=id)
 
 mixin blog-list()
     div.blog__list.row
